@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Airlines</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+	<div class="main">
+		<section id="landing" class="landing page active">
+			<button onclick="showPage('booking')">Book a flight</button> 
+		</section>
+		<section id="booking" class="booking page">
+			<div class="tab-contents">
+			<button onclick="showPage('landing')">Back</button>
+				<div id="booking-details" class="booking-details tab active">
+					<h1>Booking Details</h1>
+					<div class="input-forms">
+						<label>Destination:</label><br>
+						<label for="from">From:</label>
+						<input type="text" id="from" placeholder="City Name" />	
+						<label for="to">To:</label>
+						<input type="text" id="to" placeholder="City Name" /><br>
+					</div>
+					<div class="radio-inputs">
+						<label for="flight-type">Type of flight:</label><br>
+						<input type="radio" id="round-trip" name="flight-type" data-type="roundtrip" value="roundtrip" checked />
+						<label for="round-trip">Round Trip</label>
+						<input type="radio" id="one-way" name="flight-type" data-type="oneway" value="oneway" />
+						<label for="one-way">One Way</label>
+					</div>
+					<div id="depart" class="date-inputs active">
+						<label for="depart-date">Depart Date:</label>
+						<input type="date" id="depart-date" name="depart-date" />
+					</div>
+					<div id="return" class="date-inputs active">
+						<label for="return-date">Return Date:</label>
+						<input type="date" id="return-date" name="return-date" />
+					</div>
+					<div class="option-inputs">
+						<label for="passengers">Passengers:</label>
+						<select id="passengers">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+						</select>
+					</div>
+					<button id="search-flights">Search Flight</button>
+				</div>
+				<div id="flights" class="flights tab">
+					<div>
+						<h1>Flights</h1>
+						<div id="flight-list">
+						</div>
+						<button onclick="showTab('flights', 'booking-details')">Previous</button>
+					</div>
+				</div>
+				<div id="passenger" class="passenger tab">
+					<h1>Passenger Information</h1>
+					<p>Please provide all the information about the passengers</p>
+					<div id="passenger-forms">
+					</div>
+					<button onclick="showTab('passenger', 'flights')">Previous</button>
+					<button id="submit-passengers">Continue</button>
+				</div>
+				<div id="summary" class="summary tab">
+					<h2>Booking Summary</h2>
+					<p>Review your booking details before confirming.</p>
+					<div class="summary-section">
+						<h3>Passenger details</h3>
+						<div id="passenger-summary">
+						</div>
+					</div>
+					<div class="summary-section">
+						<h3>Flight Information</h3>
+						<div id="flight-summary">
+						</div>
+					</div>
+					<button onclick="showTab('summary', 'passenger')">Previous</button> 
+					<button id="book-now">Book now</button>
+				</div>
+				<div id="success-message" class="success-message hidden">
+					<div class="success-icon">✓</div>
+					<h2>Booking Confirmed!</h2>
+					<p>Your flight has been successfully booked. A confirmation email has been sent to your registered email address.</p>
+					<p>Your booking reference is: <strong>FLT-2023-5J560</strong></p>
+					<button id="finish-booking">Finish</button>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="script.js"></script>
+	<script src="functions.js"></script>
+</body>
+
+</html>

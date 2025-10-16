@@ -1,0 +1,4 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+
+.landing, .booking, .date-inputs, .tab, .hidden {display: none;}
+.active {display:block;}
