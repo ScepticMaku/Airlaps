@@ -8,28 +8,50 @@
 </head>
 
 <body>
+		<header>
+			<h1>AIRLAPS</h1>
+		</header>
 	<div class="main">
 		<section id="landing" class="landing page active">
-			<button onclick="showPage('booking')">Book a flight</button> 
+				<div class="welcome">
+					<h2>WELCOME TO <br> AIRLAPS</h2>
+					<div class="intro">
+						<h3>your easy way to book flights.</h3>
+						We believe every flight should be smooth, safe, and enjoyable. Our friendly crew, comfortable cabins, and reliable service make traveling with us easy and worry-free.
+					</div>
+					<button onclick="showPage('booking')">Book a flight</button>
+				</div>
+				<img src="airplane1.jpg" alt="">
 		</section>
 		<section id="booking" class="booking page">
 			<div class="tab-contents">
 			<button onclick="showPage('landing')">Back</button>
 				<div id="booking-details" class="booking-details tab active">
 					<h1>Booking Details</h1>
+					<label>Destination:</label><br>
 					<div class="input-forms">
-						<label>Destination:</label><br>
-						<label for="from">From:</label>
-						<input type="text" id="from" placeholder="City Name" />	
-						<label for="to">To:</label>
-						<input type="text" id="to" placeholder="City Name" /><br>
+						<div >
+							<label for="from">From:</label>
+							<input type="text" id="from" placeholder="City Name" />	
+						</div>
+						<div>
+							<label for="to">To:</label>
+							<input type="text" id="to" placeholder="City Name" /><br>
+						</div>
 					</div>
-					<div class="radio-inputs">
+					<div class="types">
 						<label for="flight-type">Type of flight:</label><br>
-						<input type="radio" id="round-trip" name="flight-type" data-type="roundtrip" value="roundtrip" checked />
-						<label for="round-trip">Round Trip</label>
-						<input type="radio" id="one-way" name="flight-type" data-type="oneway" value="oneway" />
-						<label for="one-way">One Way</label>
+						<div>
+							<div id="types">
+								<label for="round-trip">Round Trip</label>
+								<input type="radio" id="round-trip" name="flight-type" data-type="roundtrip" value="roundtrip" checked />
+							</div>
+							<div id="types">
+								<label for="one-way">One Way</label>
+								<input type="radio" id="one-way" name="flight-type" data-type="oneway" value="oneway" />
+							</div>
+							
+						</div>
 					</div>
 					<div id="depart" class="date-inputs active">
 						<label for="depart-date">Depart Date:</label>

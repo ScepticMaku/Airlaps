@@ -1,4 +1,61 @@
-* {margin: 0;padding: 0;box-sizing: border-box;}
+* {  margin: 0; padding: 0; box-sizing: border-box;}
+body {  font-family: "Poppins", sans-serif;  background-color: aliceblue;  color: #222;}
+header{ background-color: rgb(140, 186, 226); font-size: 25px;  border: 2px solid #cce5f6;  height: 70px; padding: 10px; color: aliceblue; align-content: center;}
 
-.landing, .booking, .date-inputs, .tab, .hidden {display: none;}
-.active {display:block;}
+/* Layout containers */
+.main {  margin: 20px auto;  max-width: 1180px;}
+.landing,.booking,.date-inputs,.tab,.hidden { display: none; margin: 0 auto;  width: 100%;}
+.active { display: block;}
+
+/* Landing section */
+.landing.active { display: flex;}
+.landing {position: relative; margin: 100px auto; height: auto; justify-content: space-around;  align-items: center;  flex-wrap: wrap; border: 2px solid #cce5f6;  border-radius: 50px;  background-color: rgb(140, 186, 226);}
+.landing h2 { font-size: 40px;  color: #006488; font-weight: 1000; line-height: 1.2; }
+.landing p { color: #333;  font-size: 1rem;  max-width: 600px;  text-align: center;}
+img {max-width: 520px; height: auto;border-radius: 0 50px 50px 0;}
+.intro{width: 500px; text-align: start; font-size: 20px; padding-top: 10px;}
+.welcome{ margin: 0px auto; padding: 20px; line-height: 1.8; color: #333; transition: all 0.3s ease;}
+
+/* Buttons */
+button { font-size: 16px; border: none;  border-radius: 6px;  background-color: #006488;  padding: 12px 50px;  color: aliceblue;  font-weight: 400;  cursor: pointer;  transition: background-color 0.2s ease, transform 0.2s ease;  margin: 5px 0px;}
+button:hover {  background-color: #004c66;  transform: translateY(-1px);}
+
+/* Booking details box */
+.booking-details { margin: 20px auto;  line-height: 1.8;  padding: 20px;  border: 2px solid #cce5f6;  border-radius: 10px;  background-color: rgb(140, 186, 226);  font-size: 15px;  color: #333; transition: all 0.3s ease;}
+.booking-details:hover {  box-shadow: 0 4px 10px rgba(0, 100, 136, 0.2);}
+.booking-details label{font-size: 20px; }
+
+/* Form input styles */
+input{  border: 1px solid #ccc;  border-radius: 5px;  padding: 8px;  width: 98%;  margin: 6px 0;  font-size: 14px;}
+input:focus, select:focus {  outline: none;  border-color: #006488;  box-shadow: 0 0 4px rgba(0, 100, 136, 0.2);}
+#types {  display: flex;   gap: 8px;  padding: 10px;}
+input[type="radio"] { width: auto;  margin: 0 5px 0 0;  font-size: inherit;  accent-color: #006488;  cursor: pointer;}
+
+/* Flight list and cards */
+#flight-list {  display: flex;  flex-direction: column;  gap: 15px;}
+.flight-card {  background: #f9fcff;  border: 1px solid #cce5f6;  border-radius: 10px;  padding: 15px 20px;  transition: all 0.3s ease;}
+.flight-card:hover {  transform: translateY(-2px);  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);}
+.flight-header {  display: flex;  justify-content: space-between;  align-items: center;  border-bottom: 1px solid #cce5f6;  padding-bottom: 8px;  margin-bottom: 10px;}
+.flight-header h3 {  color: #006488;  font-size: 1.1rem;}
+.flight-header .price { font-weight: bold;  color: #006488;}
+
+/* Passenger forms */
+.passenger-form { margin: 15px 0px; background:  rgb(140, 186, 226);  padding: 15px 20px;  border-radius: 10px;  border: 1px solid #cce5f6;  margin-bottom: 20px;}
+.passenger-form h3 { color: #006488;  margin-bottom: 10px;}
+
+/* Summary section */
+#summary {  margin-top: 20px;}
+#flight-summary,#passenger-summary {  background: #f9fcff;  border: 1px solid #cce5f6; border-radius: 10px;  padding: 15px;  margin-bottom: 20px;}
+
+/* Success message */
+#success-message {  background-color: #e6f4ea;  border: 1px solid #b5e0c0;  color: #2b7a0b;  font-weight: 600;  text-align: center;  padding: 25px;  border-radius: 10px;  font-size: 1.1rem;}
+
+/* Hidden class */
+.hidden {  display: none !important;}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {  padding: 0 15px;}
+  .flight-header {  flex-direction: column;  align-items: flex-start;  gap: 6px;}
+  button {  width: 100%;}
+}
